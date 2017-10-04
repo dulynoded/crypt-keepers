@@ -1,5 +1,6 @@
 const models = require('../models');
-const gdax = require('../../helpers/gdax.js')
+const gdax = require('../../helpers/gdax.js');
+const db = require('../db/index');
 
 
 module.exports = {
@@ -58,14 +59,9 @@ module.exports = {
         });
     },
     post: (req, res) => {
-      models.list.post()
-        .then(() => {
-          res.status(201).send();
-        })
-        .catch((err) => {
-          res.status(404).send();
-          throw err;
-        });
+      const { username, coin } = req.body;
+      db.updateWatchList(username, coin)
+        .then(res.sendStatus(201));
     },
   },
 
