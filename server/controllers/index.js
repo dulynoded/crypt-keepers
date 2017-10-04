@@ -18,16 +18,6 @@ module.exports = {
           res.sendStatus(404);
         });
     },
-    post: (req, res) => {
-      models.range.post()
-        .then(() => {
-          res.status(201).send();
-        })
-        .catch((err) => {
-          res.status(404).send();
-          throw err;
-        });
-    },
   },
   ticker: {
     get: (req, res) => {
@@ -40,16 +30,6 @@ module.exports = {
           res.sendStatus(404);
         });
     },
-    post: (req, res) => {
-      models.range.post()
-        .then(() => {
-          res.status(201).send();
-        })
-        .catch((err) => {
-          res.status(404).send();
-          throw err;
-        });
-    },
   },
   search: {
     get: (req, res) => {
@@ -58,16 +38,6 @@ module.exports = {
       models.search.get(currency)
         .then((data) => {
           res.status(200).send(data);
-        })
-        .catch((err) => {
-          res.status(404).send();
-          throw err;
-        });
-    },
-    post: (req, res) => {
-      models.search.post()
-        .then(() => {
-          res.status(201).send();
         })
         .catch((err) => {
           res.status(404).send();
