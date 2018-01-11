@@ -53,11 +53,20 @@ News: Displays general cryptocurrency trending news and specific coin news. Coin
 
 ## Requirements
 
+- Babel
+- Chai ^4.1.2
+- D3 ^4.11.0
+- Express ^4.15.5
+- Jest ^21.2.1
 - Node 6.4.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+- MongoDB x.x.x
+- Mongoose ^4.11.13
+- React 16.0.x
+- React Redux ^5.0.6
+- Webpack 3.6.x
+- Request-Promise x.x.x
+
+Copy example.config.js in ./server folder and rename it to config.js. Include your Crytopanic API key here.
 
 ## Development
 
@@ -66,9 +75,7 @@ News: Displays general cryptocurrency trending news and specific coin news. Coin
 From within the root directory:
 
 ```sh
-npm install -g bower
 npm install
-bower install
 ```
 
 ### Roadmap
